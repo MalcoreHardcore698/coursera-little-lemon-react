@@ -1,0 +1,118 @@
+@import '~theme/_variables';
+@import '~theme/_mixins';
+@import '~theme/_media';
+
+.page-reservations {
+  position: relative;
+  width: 100%;
+
+  .page-reservations__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.73));
+    z-index: 2;
+  }
+
+  .page-reservations__container {
+    @include flex-container(row, space-between, flex-start);
+
+    position: relative;
+    width: 85%;
+    margin: 0px auto;
+    padding: 80px 0;
+    z-index: 3;
+    gap: 100px;
+
+    .container-text {
+      margin-block-start: 100px;
+      color: $color-white;
+      width: 60%;
+
+      h2 {
+        margin-block-end: $space-l;
+      }
+
+      p {
+        margin-block-end: $space-l;
+      }
+    }
+
+    .container-form {
+      width: 40%;
+      height: auto;
+      padding: $space-l;
+      background-color: $color-surface;
+      border-radius: $border-radius-l;
+      color: $color-text;
+      text-align: left;
+
+      h1 {
+        font-size: $font-size-l;
+        margin-block-end: $space-s;
+      }
+
+      p {
+        font-size: $font-size-s;
+        margin-block-end: $space-l;
+      }
+    }
+  }
+}
+
+@include respond-to('laptop') {
+  .page-reservations {
+    .page-reservations__container {
+      flex-direction: column;
+      padding-inline: 30px;
+      width: 100%;
+
+      .container-text,
+      .container-form {
+        width: 100%;
+        margin-block-end: 0;
+      }
+
+      .container-text {
+        margin-block-start: 0;
+        padding-inline: $space-l;
+      }
+    }
+  }
+}
+
+@include respond-to('tablet') {
+  .page-reservations {
+    .page-reservations__container {
+      padding-block: $space-xl;
+      padding-inline: $space-l;
+      gap: $space-l;
+
+      .container-text {
+        h2 {
+          font-size: $font-size-l;
+        }
+
+        p {
+          font-size: $font-size-s;
+        }
+      }
+    }
+  }
+}

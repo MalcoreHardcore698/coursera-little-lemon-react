@@ -1,0 +1,41 @@
+@import '~theme/_variables';
+@import '~theme/_mixins';
+@import '~theme/_media';
+
+header.header-container {
+  @include flex-container(row, space-between, center);
+
+  padding: $space-s $media-space-l;
+
+  .header-container__logo {
+    width: 200px;
+  }
+
+  .header-container__hamburger {
+    display: none;
+    user-select: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: $transition;
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+}
+
+@include respond-to('tablet') {
+  header.header-container {
+    width: 100%;
+
+    .header-container__logo {
+      width: 150px;
+    }
+
+    .header-container__hamburger {
+      display: flex;
+      line-height: 0.8;
+      z-index: 20;
+    }
+  }
+}

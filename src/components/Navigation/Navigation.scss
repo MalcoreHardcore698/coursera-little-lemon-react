@@ -1,0 +1,63 @@
+@import '~theme/_variables';
+@import '~theme/_mixins';
+@import '~theme/_media';
+
+ul.navigation-list {
+  @include flex-container(row, flex-end, center);
+
+  li {
+    @include flex-center;
+
+    padding: 0 $space-m;
+
+    a {
+      @include flex-center;
+
+      font-size: $font-size-s;
+      font-weight: $font-weight-l;
+      color: $color-link;
+      opacity: .65;
+
+      &.active,
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include respond-to('tablet') {
+  .navigation:not(.expanded) {
+    display: none;
+  }
+
+  .navigation.expanded {
+    @include flex-center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-white;
+    z-index: 15;
+
+    ul.navigation-list {
+      @include flex-container(column, flex-start, center);
+
+      gap: $space-l;
+
+      li {
+        a {
+          font-size: $font-size-s;
+          font-weight: $font-weight-l;
+          user-select: none;
+        }
+
+        .active-links.active {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

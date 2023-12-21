@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16pt;
+  color: #333;
+}
+
+input {
+  font-family: "karla", sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+
+::placeholder {
+  color: #949494;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #333;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Markazi Text', serif;
+}
+
+h1 {
+  font-size: 64pt;
+}
+
+h2 {
+  font-size: 40pt;
+}
+
+h3 {
+  font-size: 18pt;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.header {
+  background-color: white;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .header-wrapper {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .header-wrapper .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    padding: 10px 30px 30px;
+    background: azure;
+  }
+
+  .header-wrapper .mobile-nav ul li {
+    padding: 10px 0;
+  }
+}
+

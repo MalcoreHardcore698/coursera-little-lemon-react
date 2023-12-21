@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "1",
+    "image": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "title": "Greek Salad",
+    "price": 12.99,
+    "description": "The famous Greek salad of crispy lettuce, peppers, olives and our Chicago styled feta cheese, garnished with crunchy garlic, rosemary croutons."
+  },
+  {
+    "_id": "2",
+    "image": "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "title": "Bruschetta",
+    "price": 5.99,
+    "description": "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil; made perfect for an evening dinner."
+  },
+  {
+    "_id": "3",
+    "image": "https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "title": "Lemon Dessert",
+    "price": 5.00,
+    "description": "This comes straight from Grandma's recipe book. Every last ingredient has been sourced and is as authentic as can be imagined."
+  },
+  {
+    "_id": "4",
+    "image": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "title": "Greek Salad",
+    "price": 12.99,
+    "description": "The famous Greek salad of crispy lettuce, peppers, olives and our Chicago styled feta cheese, garnished with crunchy garlic, rosemary croutons."
+  },
+  {
+    "_id": "5",
+    "image": "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "title": "Bruschetta",
+    "price": 5.99,
+    "description": "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil; made perfect for an evening dinner."
+  },
+  {
+    "_id": "6",
+    "image": "https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "title": "Lemon Dessert",
+    "price": 5.00,
+    "description": "This comes straight from Grandma's recipe book. Every last ingredient has been sourced and is as authentic as can be imagined."
+  }
+]

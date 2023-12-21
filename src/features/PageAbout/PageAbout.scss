@@ -1,0 +1,15 @@
+@import '~theme/_variables';
+@import '~theme/_mixins';
+
+.page-about {
+  @include flex-container(column);
+
+  padding-block: $space-l $size-l;
+  padding-inline: $media-space-l;
+  min-height: 60vh;
+  gap: $space-s;
+
+  h1 {
+    font-size: $font-size-l;
+  }
+}

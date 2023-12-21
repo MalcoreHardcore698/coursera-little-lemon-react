@@ -1,0 +1,63 @@
+/// Colors
+$color-primary: #495d56;
+$color-second-primary: #f4ce14;
+$color-secondary: #c7c7c7;
+$color-tertiary: #696969;
+$color-surface: #edefee;
+$color-background: #333;
+$color-tag: #ee9972;
+$color-text: #333;
+$color-link: #495d56;
+$color-link-hover: darkblue;
+$color-link-focus: darkblue;
+$color-link-active: darkblue;
+$color-white: #f3f3f3;
+$color-black: #111;
+
+/// Appearance
+$border: 1px solid #dde5e0;
+$border-radius-l: 16px;
+$border-radius-m: 8px;
+$border-radius-l: 16px;
+$border-radius-m: 8px;
+$box-shadow: 0 5px 8px 0 #f3f3f3;
+
+/// Font Sizes
+$font-size-xxl: 3em;
+$font-size-xl: 2.35em;
+$font-size-l: 1.65em;
+$font-size-m: 1em;
+$font-size-s: .85em;
+$font-size-xs: .65em;
+$font-size-xxs: .45em;
+
+/// Font Weights
+$font-weight-xl: 600;
+$font-weight-l: 500;
+$font-weight-m: 400;
+$font-weight-s: 300;
+$font-weight-xs: 200;
+
+/// Spaces
+$space-xxl: 64px;
+$space-xl: 48px;
+$space-l: 24px;
+$space-m: 16px;
+$space-s: 8px;
+$space-xs: 4px;
+
+/// Sizes
+$size-xl: 96px;
+$size-l: 64px;
+
+/// Media
+$media-space-s: $space-m;
+$media-space-m: 6%;
+$media-space-l: 8%;
+$media-width-s: 576px;
+$media-width-m: 768px;
+$media-width-l: 992px;
+$media-width-xl: 1200px;
+
+/// Transitions
+$transition: all 300ms ease;

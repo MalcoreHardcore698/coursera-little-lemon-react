@@ -1,0 +1,13 @@
+[
+  {
+    "_id": "1",
+    "dish": {
+      "_id": "1",
+      "image": "Dessert1",
+      "title": "Greek Salad",
+      "price": 12.99,
+      "description": "The famous Greek salad of crispy lettuce, peppers, olives and our Chicago styled feta cheese, garnished with crunchy garlic, rosemary croutons."
+    },
+    "createdAt": ""
+  }
+]

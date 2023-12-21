@@ -1,0 +1,51 @@
+@import '~theme/_variables';
+@import '~theme/_mixins';
+@import '~theme/_media';
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  padding: $size-xl $media-space-l;
+  gap: $space-s;
+
+  .carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 24px 16px;
+
+    h1 {
+      font-size: $font-size-xl;
+    }
+  }
+
+  .carousel-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin: 0 auto;
+    padding: 10px 0;
+    gap: 32px;
+  }
+}
+
+@include respond-to('laptop') {
+  .carousel .carousel-header {
+    width: 100%;
+
+    h1 {
+      font-size: $font-size-l;
+    }
+  }
+}
+
+@include respond-to('tablet') {
+  .carousel {
+    padding: $space-xl $media-space-l;
+
+    .carousel-header {
+      h1 {
+        font-size: $font-size-m;
+      }
+    }
+  }
+}

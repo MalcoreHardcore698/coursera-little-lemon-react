@@ -1,0 +1,18 @@
+@import '~theme/_variables';
+
+.page-catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding-block-start: $space-m;
+  padding-block-end: $space-xl;
+  padding-inline: $media-space-l;
+  gap: 32px;
+
+  .card {
+    height: 100%;
+
+    .card-content {
+      flex-grow: 1;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import '~theme/_variables';
+@import '~theme/_mixins';
+@import '~theme/_media';
+
+.hero {
+  @include flex-container(row, space-between);
+
+  background-color: $color-primary;
+  padding: $size-l $media-space-l;
+  color: $color-white;
+
+  .hero-content {
+    @include flex-container(column);
+
+    width: 80%;
+    gap: $space-m;
+
+    h1 {
+      color: #f4ce14;
+    }
+
+    h1, h2 {
+      line-height: 0.8;
+    }
+
+    p {
+      width: 75%;
+      margin: 20px 0;
+    }
+  }
+
+  .hero-image {
+    @include flex-center;
+
+    position: relative;
+    top: 125px;
+    margin-block-start: -125px;
+    width: 400px;
+    height: 450px;
+    border-radius: $border-radius-m;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@include respond-to('tablet') {
+  .hero {
+    @include flex-container(column);
+
+    .hero-content {
+      width: 100%;
+
+      h1 {
+        font-size: $font-size-xl;
+      }
+
+      h2 {
+        font-size: $font-size-m;
+      }
+    }
+
+    .hero-image {
+      position: initial;
+      margin-block-start: 30px;
+      margin-block-end: -100px;
+      width: 100%;
+    }
+  }
+}
+
+@include respond-to('mobile') {
+  .hero {
+    .hero-content {
+      p {
+        width: 100%;
+        font-size: smaller;
+      }
+    }
+  }
+}

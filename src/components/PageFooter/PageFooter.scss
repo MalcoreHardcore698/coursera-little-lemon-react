@@ -1,0 +1,112 @@
+@import '~theme/_variables';
+@import '~theme/_mixins';
+@import '~theme/_media';
+
+.page-footer {
+  @include flex-container(column);
+
+  background-color: $color-background;
+  padding-block-start: $space-xl;
+  padding-block-end: $space-l;
+  padding-inline: $media-space-l;
+  gap: $space-xl;
+
+  .page-footer__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    color: $color-white;
+    gap: $space-xl;
+
+    .content-logo {
+      @include flex-container(column);
+
+      flex-grow: 1;
+      gap: $space-l;
+
+      img {
+        position: relative;
+        margin-inline-start: -$space-s;
+        width: $size-xl;
+      }
+
+      p {
+        font-size: $font-size-xs;
+        color: $color-secondary;
+      }
+    }
+
+    .content-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+      font-size: $font-size-m;
+      gap: $space-m;
+
+      .content-container__block {
+        @include flex-container(column);
+
+        justify-self: center;
+        gap: $space-l;
+
+        h5 {
+          color: $color-secondary;
+        }
+
+        ul {
+          @include flex-container(column);
+
+          gap: $space-s;
+
+          li {
+            text-transform: capitalize;
+            font-size: $font-size-xs;
+
+            a {
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-footer__links {
+    @include flex-container(row, space-between);
+
+    border-block-start: 1px solid rgb(255 255 255 / 5%);
+    padding-block-start: $space-l;
+    width: 100%;
+
+    span.links-copyright {
+      font-size: $font-size-xs;
+      color: $color-tertiary;
+    }
+
+    ul.links-socials {
+      @include flex-container(row, flex-end);
+
+      gap: $space-s;
+
+      a {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+@include respond-to('laptop') {
+  .page-footer {
+    .page-footer__content {
+      grid-template-columns: 1fr;
+
+      .content-logo {
+        @include flex-container(row, flex-end, center);
+      }
+
+      .content-container {
+        .content-container__block {
+          justify-self: flex-start;
+        }
+      }
+    }
+  }
+}

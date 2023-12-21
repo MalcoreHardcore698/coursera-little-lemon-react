@@ -1,0 +1,67 @@
+@import '~theme/_variables';
+@import '~theme/_mixins';
+@import '~theme/_media';
+
+form.form {
+  fieldset {
+    border: none;
+  }
+
+  .field {
+    @include flex-container(column);
+
+    margin-block-end: $space-s;
+    width: 100%;
+  }
+
+  .field label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-m;
+    margin-block-end: $space-s;
+  }
+
+  .error-message {
+    font-size: $font-size-xs;
+    margin-block-start: $space-xs;
+    margin-block-end: $space-xs;
+    color: red;
+  }
+
+  input {
+    padding: $space-s;
+    border: $border;
+    border-radius: $border-radius-m;
+    width: 100%;
+  }
+
+  input[type=datetime-local] {
+    color: $color-text;
+  }
+
+  select {
+    padding: $space-s;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-m;
+    color: $color-text;
+    outline: none;
+    border: none;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    padding: $space-m;
+    border: none;
+    border-radius: $border-radius-m;
+    background-color: $color-text;
+    font-size: $font-size-m;
+    font-weight: bold;
+    color: $color-white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-primary;
+      transition: $transition;
+    }
+  }
+}

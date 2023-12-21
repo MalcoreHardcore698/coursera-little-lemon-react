@@ -1,0 +1,30 @@
+@import '~theme/_variables';
+@import '~theme/_mixins';
+
+.wrapper {
+  @include flex-center;
+
+  width: fit-content;
+  min-height: 100vh;
+  font-weight: $font-weight-xl;
+  font-family: monospace;
+  font-size: $font-size-xxl;
+  background: linear-gradient(90deg, $color-black 50%, $color-black 0) right / 200% 100%;
+  animation: l21 2s infinite linear;
+
+  &::before {
+    content: 'Loading...';
+    color: $color-black;
+    padding-inline: $space-s;
+    background: inherit;
+    background-image: linear-gradient(90deg, $color-white 50%, $color-black 0);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @keyframes l21 {
+    100%{
+      background-position: left;
+    }
+  }
+}

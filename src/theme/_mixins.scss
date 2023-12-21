@@ -1,0 +1,12 @@
+/// Mixin to apply flexible set of rules
+@mixin flex-container($direction: row, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/// Mixin to apply content centralization
+@mixin flex-center {
+  @include flex-container(row, center, center);
+}

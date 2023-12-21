@@ -1,0 +1,83 @@
+@import '~theme/_variables';
+@import '~theme/_mixins';
+@import '~theme/_media';
+
+.card {
+  @include flex-container(column);
+
+  background-color: $color-surface;
+  border-radius: $border-radius-l;
+
+  a {
+    width: 100%;
+  }
+
+  .card-image {
+    @include flex-container(row, flex-start, center);
+
+    border-radius: $border-radius-l $border-radius-l 0 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-image__placeholder {
+      background: $color-white;
+    }
+  }
+
+  .card-content {
+    @include flex-container(column);
+
+    padding: $space-l;
+    gap: $space-l;
+
+    .card-content-title {
+      @include flex-container(row, space-between);
+
+      width: 100%;
+    }
+
+    .card-content-tag {
+      color: $color-tag;
+    }
+
+    h4 {
+      @include flex-container(row, flex-start, center);
+
+      font-size: $font-size-m;
+    }
+
+    p {
+      font-size: $font-size-s;
+      line-height: 1.2;
+      flex-grow: 1;
+    }
+  }
+
+  .button {
+    width: 100%;
+    border-radius: 0 0 $border-radius-l $border-radius-l;
+  }
+}
+
+@include respond-to('tablet') {
+  .card-imager {
+    height: 200px;
+  }
+
+  .card-content {
+    h4 {
+      font-size: smaller;
+    }
+
+    p, h3 {
+      font-size: smaller;
+    }
+  }
+}
