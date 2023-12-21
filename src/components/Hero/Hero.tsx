@@ -8,6 +8,9 @@ import HeroImage from 'assets/images/gourmet.jpg';
 import './Hero.scss';
 import Animated from '../Animated';
 
+/**
+ * Wide presentation component with text and background
+ */
 const Hero: React.FC = () => (
   <div className='hero'>
     <div className='hero-content'>

@@ -6,6 +6,9 @@ import PageFooter from 'components/PageFooter';
 
 import './Layout.scss';
 
+/**
+ * Base layout component with predefined header and footer
+ */
 const Layout: React.FC<PropsWithChildren> = ({ children }) => (
   <div className='layout'>
     <PageHeader />

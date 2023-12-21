@@ -28,6 +28,9 @@ const animateTo = {
   y: 0,
 };
 
+/**
+ * Base navigation component
+ */
 const Navigation: React.FC<Props> = ({ links, isExpanded, onClick }) => {
   const menu = useMemo(() => {
     return (

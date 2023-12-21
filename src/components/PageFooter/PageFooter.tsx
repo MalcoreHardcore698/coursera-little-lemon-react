@@ -5,6 +5,9 @@ import Logo from 'assets/images/logo.png';
 
 import './PageFooter.scss';
 
+/**
+ * Base footer component with predefined links and styles
+ */
 const Footer: React.FC = () => (
   <div className='page-footer'>
     <div className='page-footer__content'>

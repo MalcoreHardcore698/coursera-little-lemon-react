@@ -8,19 +8,20 @@ type CreateContextResult<T> = {
   useContext: () => ContextProps<T>;
 };
 
-const ArrowFunction = () => {};
-
 export const contextFrom = <T, >(
   defaultValue: T,
 ): { Provider: React.Provider<ContextProps<T>>; useContext: () => ContextProps<T> } => {
   const Context: React.Context<ContextProps<T>> = React.createContext<ContextProps<T>>([
     defaultValue,
-    ArrowFunction,
+    () => {},
   ]);
 
   return { Provider: Context.Provider, useContext: () => React.useContext(Context) };
 };
 
+/**
+ * Custom createContext for quickly create context without duplicating the same code
+ */
 export const createContext = <T, >(defaultValue: T): CreateContextResult<T> => {
   const Context = contextFrom(defaultValue);
 

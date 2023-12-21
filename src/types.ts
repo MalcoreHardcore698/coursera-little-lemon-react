@@ -1,11 +1,3 @@
-import type { ReactElement } from 'react';
-
-export type RouteType = {
-  path: string;
-  component: () => ReactElement;
-  exact?: boolean;
-}
-
 export type TDish = {
   _id: string;
   title: string;
@@ -14,8 +6,8 @@ export type TDish = {
   price: number;
 };
 
-export interface TReservation {
+export type TReservation = {
   _id: string;
   dish: TDish;
   createdAt: string;
-}
+};

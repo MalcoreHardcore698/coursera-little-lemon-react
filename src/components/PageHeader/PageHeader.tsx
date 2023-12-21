@@ -10,6 +10,9 @@ import { LINKS } from './const';
 
 import './PageHeader.scss';
 
+/**
+ * Base header component with predefined links and styles
+ */
 const Header: React.FC = () => {
   const [visible, setVisible] = useState(false);
 

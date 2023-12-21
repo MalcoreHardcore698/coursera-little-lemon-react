@@ -30,6 +30,9 @@ export interface Client {
   reservations: () => Promise<Array<TReservation>>;
 }
 
+/**
+ * This is a simple server simulation
+ */
 const client: Client = {
   donate: Promise.resolve,
 

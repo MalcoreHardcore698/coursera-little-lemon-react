@@ -10,9 +10,15 @@ import type { TDish } from 'types';
 import './Card.scss';
 
 interface Props {
+  /**
+   * Dish object
+   */
   dish: TDish;
 }
 
+/**
+ * Base dish card component with defined styles
+ */
 const Card: React.FC<Props> = ({ dish }) => (
   <div className='card'>
     <div className='card-image'>
