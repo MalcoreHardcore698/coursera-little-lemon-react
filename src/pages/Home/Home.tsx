@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Hero from 'components/Hero';
 import Animated from 'components/Animated';
-import Carousel from 'features/Carousel';
+import SectionHero from 'features/SectionHero';
+import SectionCarousel from 'features/SectionCarousel';
 
 const Home: React.FC = () => (
   <Animated.Fade>
-    <Hero />
-    <Carousel />
+    <SectionHero />
+    <SectionCarousel />
   </Animated.Fade>
 );
 

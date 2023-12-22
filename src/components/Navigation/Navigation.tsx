@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import type { ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import cn from 'classnames';
@@ -9,7 +9,7 @@ import './Navigation.scss';
 export type NavigationLink = {
   path: string;
   title: ReactNode;
-  active?: boolean;
+  disabled?: boolean;
 };
 
 interface Props {
@@ -40,8 +40,9 @@ const Navigation: React.FC<Props> = ({ links, isExpanded, onClick }) => {
             key={link.path}
             initial={animateFrom}
             animate={animateTo}
+            className={cn({ disabled: !!link?.disabled })}
             transition={{ delay: 0.05 + (0.05 * index) }}
-            onClick={() => onClick?.(link)}
+            onClick={() => !link?.disabled && onClick?.(link)}
           >
             <NavLink to={link.path}>
               {link.title}

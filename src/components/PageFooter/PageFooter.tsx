@@ -9,7 +9,7 @@ import './PageFooter.scss';
  * Base footer component with predefined links and styles
  */
 const Footer: React.FC = () => (
-  <div className='page-footer'>
+  <footer className='page-footer'>
     <div className='page-footer__content'>
       <div className='content-logo'>
         <img src={Logo} alt='Little Lemon logo' />
@@ -74,7 +74,7 @@ const Footer: React.FC = () => (
         </li>
       </ul>
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;

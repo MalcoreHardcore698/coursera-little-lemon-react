@@ -10,11 +10,13 @@ import './Layout.scss';
  * Base layout component with predefined header and footer
  */
 const Layout: React.FC<PropsWithChildren> = ({ children }) => (
-  <div className='layout'>
+  <>
     <PageHeader />
-    {children}
+    <main className='layout'>
+      {children}
+    </main>
     <PageFooter />
-  </div>
+  </>
 );
 
 export default Layout;

@@ -11,10 +11,20 @@ export const LINKS = [
   },
   {
     path: ROUTES.CATALOG,
-    title: 'Catalog'
+    title: 'Menu'
   },
   {
     path: ROUTES.RSERVATIONS,
     title: 'Reservations'
+  },
+  {
+    path: ROUTES.ORDER_ONLINE,
+    title: 'Order Online',
+    disabled: true,
+  },
+  {
+    path: ROUTES.LOGIN,
+    title: 'Login',
+    disabled: true,
   }
 ];

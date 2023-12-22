@@ -3,17 +3,17 @@ import { NavLink } from 'react-router-dom';
 
 import { ROUTES } from 'const';
 import Button from 'components/Button';
+import Animated from 'components/Animated';
 import HeroImage from 'assets/images/gourmet.jpg';
 
-import './Hero.scss';
-import Animated from '../Animated';
+import './SectionHero.scss';
 
 /**
  * Wide presentation component with text and background
  */
-const Hero: React.FC = () => (
-  <div className='hero'>
-    <div className='hero-content'>
+const SectionHero: React.FC = () => (
+  <section className='section-hero'>
+    <div className='section-hero__content'>
       <Animated.SlideDown>
         <h1>Little Lemon</h1>
       </Animated.SlideDown>
@@ -29,10 +29,10 @@ const Hero: React.FC = () => (
       </Animated.Fade>
     </div>
 
-    <div className='hero-image'>
+    <div className='section-hero__image'>
       <img src={HeroImage} alt='Serving delicious dish' />
     </div>
-  </div>
+  </section>
 );
 
-export default Hero;
+export default SectionHero;

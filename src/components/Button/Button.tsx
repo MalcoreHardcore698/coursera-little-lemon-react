@@ -2,6 +2,8 @@ import React from 'react';
 import type { HTMLProps, PropsWithChildren } from 'react';
 import cn from 'classnames';
 
+import { LOCATORS } from 'const';
+
 import './Button.scss';
 
 interface Props extends PropsWithChildren, HTMLProps<HTMLButtonElement> {
@@ -19,7 +21,12 @@ interface Props extends PropsWithChildren, HTMLProps<HTMLButtonElement> {
  * Base button component with defined styles
  */
 const Button: React.FC<Props> = ({ className, appearance = 'default', children, onClick, ...props }) => (
-  <button {...props} className={cn('button', appearance, className)} onClick={onClick}>
+  <button
+    data-testid={LOCATORS.BTN}
+    {...props}
+    className={cn('button', appearance, className)}
+    onClick={onClick}
+  >
     {children}
   </button>
 );

@@ -3,7 +3,7 @@ import { AsyncImage } from 'loadable-image';
 import { MdDeliveryDining } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
-import { ROUTES } from 'const';
+import { LOCATORS, ROUTES } from 'const';
 import Button from 'components/Button';
 import type { TDish } from 'types';
 
@@ -20,7 +20,7 @@ interface Props {
  * Base dish card component with defined styles
  */
 const Card: React.FC<Props> = ({ dish }) => (
-  <div className='card'>
+  <article data-testid={LOCATORS.CARD} className='card'>
     <div className='card-image'>
       <AsyncImage
         src={dish.image}
@@ -31,21 +31,21 @@ const Card: React.FC<Props> = ({ dish }) => (
     </div>
 
     <div className='card-content'>
-      <div className='card-content-title'>
+      <header className='card-content-title'>
         <h3>{dish.title}</h3>
         <h3 className='card-content-tag'>${dish.price}</h3>
-      </div>
+      </header>
 
       <p>{dish.description}</p>
     </div>
 
     <NavLink to={ROUTES.RSERVATIONS}>
-      <Button>
+      <Button data-testid={LOCATORS.BTN_ORDER}>
         Order a Delivery
         <MdDeliveryDining size={30} />
       </Button>
     </NavLink>
-  </div>
+  </article>
 );
 
 export default Card;
